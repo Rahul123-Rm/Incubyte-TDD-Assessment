@@ -22,4 +22,8 @@ RSpec.describe StringCalculator do
    it "handles newline as a delimiter along with comma" do
     expect(calculator.add("1\n2,3")).to eq(6)
   end
+
+  it "supports custom delimiter defined in format //;\n1;2" do
+   expect(calculator.add("//;\n1;2")).to eq(3)
+  end
 end
